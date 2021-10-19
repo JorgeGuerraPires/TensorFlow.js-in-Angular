@@ -27,12 +27,14 @@ import { Tensor2D, Tensor1D } from "@tensorflow/tfjs-core";
  *                   column as 1d tensors.
  */
 export function determineMeanAndStddev(data: Tensor2D) {
+  // console.log(data.mean(0).print());
   const dataMean = data.mean(0);
   // TODO(bileschi): Simplify when and if tf.var / tf.std added to the API.
-  const diffFromMean = data.sub(dataMean);
-  const squaredDiffFromMean = diffFromMean.square();
-  const variance = squaredDiffFromMean.mean(0);
-  const dataStd = variance.sqrt();
+  // const diffFromMean = data.sub(dataMean);
+  // const squaredDiffFromMean = diffFromMean.square();
+  // const variance = squaredDiffFromMean.mean(0);
+  // const dataStd = variance.sqrt();
+  const dataStd = data.sub(data.mean(0)).square().mean().sqrt();
   return { dataMean, dataStd };
 }
 

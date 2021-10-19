@@ -6,6 +6,8 @@ import { Papa } from 'ngx-papaparse';
 const BASE_URL =
     'https://storage.googleapis.com/tfjs-examples/multivariate-linear-regression/data/';
 
+// https://storage.googleapis.com/tfjs-examples/multivariate-linear-regression/data/train-data.csv
+
 export const featureDescriptions = [
     'Crime rate', 'Land zone size', 'Industrial proportion', 'Next to river',
     'Nitric oxide concentration', 'Number of rooms per house', 'Age of housing',

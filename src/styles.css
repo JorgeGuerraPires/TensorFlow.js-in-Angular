@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+
+.negativeWeight {
+  color: #cc0000;
+}
+
+.positiveWeight {
+  color: #00aa00;
+}
+
+#buttons {
+  margin-top: 20px;
+  padding: 5px;
+}
+
+#oneHidden {
+  border-left: 1px solid #ededed;
+  border-right: 1px solid #ededed;
+}
+
+#linear,
+#oneHidden,
+#twoHidden {
+  padding: 5px;
+}

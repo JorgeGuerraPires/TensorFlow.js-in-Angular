@@ -22,6 +22,7 @@
     "@tensorflow/tfjs": "^3.9.0",
     "@tensorflow/tfjs-vis": "^1.5.1",
     "angular-plotly.js": "^4.0.4",
+    "ng-apexcharts": "^1.5.12",
     "ngx-papaparse": "^5.0.0",
     "plotly.js-dist-min": "^2.5.1",
     "rxjs": "~6.6.0",

@@ -1,8 +1,87 @@
-<!-- <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot>
+<!-- <plotly-plot [data]="graph.data" [layout]="graph.layout"></plotly-plot> -->
 
- -->
+<section>
+    <p class='section-head'>Description</p>
+    <p>
+        This example shows you how to perform regression with more than one input feature using the
+        <a href="https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html">Boston Housing Dataset</a>,
+        which is a famous dataset derived from information collected by the U.S. Census Service concerning housing
+        in the area of Boston Massachusetts.
+    </p>
+    <p>
+        It allows you to compare the performance of 3 different models for predicting the house prices. When training
+        the linear model, it will also display the largest 5 weights (by absolute value) of the model and
+        the feature associated with each of those weights.
+    </p>
+</section>
+
+
+
+<p class='section-head'>This a graph, showing how one feature relates to the target</p>
+<p>Remember that we have 12 features! See here: <a href="https://www.kaggle.com/c/boston-housing" target="_blank">Boston
+        Housing </a>
+</p>
+
+<!-- <h1>This a graph, show how one feature relates to the target</h1> -->
+
+<iframe width="787" height="523" seamless frameborder="0" scrolling="no"
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRFd0GIUcy5rkKCpesDPjs_q7b3WI_YYvutwPTwWHs_dFtjKuk1SSTLS21Z0Ji-txfUOgqTnGZyjHtY/pubchart?oid=1654843532&amp;format=interactive"></iframe>
+
 <section>
     <p class='section-head'>{{baselineMsg}}</p>
     <p id="status" *ngIf="loadingData">Loading data...</p>
     <p id="baselineStatus" *ngIf="!baselineMsg">Baseline not computed...</p>
+</section>
+
+
+<section>
+    <p class='section-head'>Training Progress</p>
+    <div class="with-cols">
+        <div id="linear">
+            <!-- <div class="started"></div> -->
+            <h3 class="started"></h3>
+            <div class="chart"></div>
+            <div class="status"></div>
+            <div id="modelInspectionOutput">
+                <p id="inspectionHeadline"></p>
+                <table id="myTable"></table>
+            </div>
+        </div>
+        <div id="oneHidden">
+            <div class="chart"></div>
+            <div class="status"></div>
+        </div>
+        <div id="twoHidden">
+            <div class="chart"></div>
+            <div class="status"></div>
+        </div>
+    </div>
+    <section>
+
+        <div class="example-button-row">
+            <button mat-button (click)="linearRegression()" [disabled]="simulationRunning">Linear
+                Regression</button>
+        </div>
+    </section>
+
+    <!-- <div id="buttons">
+        <div class="with-cols">
+            <button id="simple-mlr">Train Linear Regressor</button>
+            <button id="nn-mlr-1hidden">Train Neural Network Regressor (1 hidden layer)</button>
+            <button id="nn-mlr-2hidden">Train Neural Network Regressor (2 hidden layers)</button>
+        </div>
+    </div> -->
+
+</section>
+
+
+<section>
+    <p class='section-head'>Plotting one feature vs. target</p>
+    <div id="plot4"></div>
+
+    <p class='section-head'>Plotting one feature vs. target</p>
+    <div id="plot2"></div>
+
+
+
 </section>
